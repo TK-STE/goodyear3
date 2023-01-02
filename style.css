@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ html, body{
+    width: 100%;
+    height: 100%;
+    
+    background-color: aqua;  
+   
+}
+
+.snow,.snow::after,.snow::before {
+    content: "";
+    position: absolute;
+    top:-650px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+    radial-gradient( 70px 70px at 300px 70px, #fff,transparent), 
+    radial-gradient(100px 100px at 400px 450px, #fff,transparent),
+    radial-gradient(120px 120px at 500px 650px, #fff,transparent),
+    radial-gradient(70px 70px at 600px 750px, #fff,transparent),
+    radial-gradient(100px 100px at 700px 300px, #fff,transparent),
+    radial-gradient(120px 120px at 8000px 350px, #fff,transparent),
+    radial-gradient(70px 70px at 750px 400px, #fff,transparent),
+    radial-gradient(120px 120px at 460px 500px, #fff,transparent),
+    radial-gradient(100px 100px at 760px 550px, #fff,transparent);
+    background-size: 650px 650px;
+
+    animation: fall 3s linear;
+    animation-iteration-count: infinite;
+
+}
+
+
+.snow::after {
+    margin-left: -250px;
+    opacity: 0.9;
+    filter: blur(2px);
+    animation-direction: reverse;
+    animation-duration: 6s
+  
+}
+
+.snow::before{
+    margin-left: -350px;
+    opacity: 0.9;
+    filter: blur(1px);
+    animation-direction: reverse;
+    animation-duration: 9s
+   
+}
+
+
+@keyframes fall {
+
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(650px);
+    }
+}
+
+    
+
+
+.text{ 
+ 
+    font-family: monospace; 
+    width: 50ch; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    border-left: 3px solid black;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    animation:typing 8s steps(50) infinite, blinking
+    infinite;
+}
+
+    @keyframes typing {
+        from{
+            width: 0;
+        }
+        to{
+            width: 50ch;
+        }
+    }
+
+    @keyframes blinking { 
+
+        0%{ 
+        
+        border-color: black;  
+        
+        } 
+        
+        50% {  
+        
+        border-color: transparent;  
+        
+        }  
+        
+        100% {  
+        
+        border-color: black;  
+        
+        }  
+    }
+
+    
+    
+.signature {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+
+}
